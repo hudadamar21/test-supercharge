@@ -22,7 +22,6 @@ const icon = document.querySelector('#si_icon');
 const navItem = document.querySelector('.nav-items');
 const navLinks = document.querySelectorAll('.nav-items a');
 const menu = document.querySelector('#menu');
-const menuIcon = menu.querySelector('img');
 
 const containerHeight = 620
 
@@ -34,16 +33,16 @@ document.addEventListener('scroll', () => {
     navbar.classList.remove('bg-black/50')
     icon.classList.add('opacity-100')
     icon.classList.remove('opacity-0')
-    menuIcon.classList.remove('invert')
+    menu.classList.remove('text-white')
     addRemoveLinkClass('add')
-
-  // jika scroll y diatas 0, ubah background menjadi hitam dan text putih
+    
+    // jika scroll y diatas 0, ubah background menjadi hitam dan text putih
   } else if (window.scrollY > 0){
     navbar.classList.add('bg-black/50', 'backdrop-blur')
     navbar.classList.remove('bg-white/80')
     icon.classList.add('opacity-0')
     icon.classList.remove('opacity-100')
-    menuIcon.classList.add('invert')
+    menu.classList.add('text-white')
     addRemoveLinkClass('remove')
 
   // jika scroll y adalah 0, ubah hapus background 
@@ -59,20 +58,28 @@ function addRemoveLinkClass(mode) {
   })
 }
 
+const menuIcon = `
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--dashicons" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path d="M3 11h14V9H3v2zm0 5h14v-2H3v2zM3 4v2h14V4H3z" fill="currentColor"></path></svg>
+`
+
+const closeIcon = `
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--mdi" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41z" fill="currentColor"></path></svg>
+`
+
 
 // Toggle Open Menu When Mobile View 
 menu.addEventListener('click', (e) => {
   e.stopPropagation()
   navItem.classList.toggle('open')
   if(navItem.classList.contains('open')) {
-    menuIcon.src = './assets/icons/close.svg'
+    menu.innerHTML = closeIcon
     if(window.scrollY >= 0 && window.scrollY <= containerHeight) {
-      menuIcon.classList.remove('invert')
+      menu.classList.remove('text-white')
     }
   } else {
-    menuIcon.src = './assets/icons/menu.svg'
+    menu.innerHTML = menuIcon
     if(window.scrollY >= 0 && window.scrollY <= containerHeight) {
-      menuIcon.classList.add('invert')
+      menu.classList.remove('text-white')
     }
   }
 })
@@ -81,9 +88,9 @@ menu.addEventListener('click', (e) => {
 document.body.addEventListener('click', (e) => {
   if(navItem.classList.contains('open') && e.target !== navItem) {
     navItem.classList.remove('open')
-    menuIcon.src = './assets/icons/menu.svg'
+    menu.innerHTML = menuIcon
     if (window.scrollY >= 0 && window.scrollY <= containerHeight) {
-      menuIcon.classList.add('invert')
+      menu.classList.add('text-white')
     }
   }
 })
