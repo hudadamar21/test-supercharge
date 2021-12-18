@@ -1,12 +1,9 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Typed from 'typed.js';
 
 AOS.init({
   duration: 500,
   once: true,
 });
-
 
 new Typed('#typed', {
   strings: ['business', 'interactive'],

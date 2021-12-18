@@ -70,7 +70,7 @@
     @apply 
       flex
       bg-black text-white 
-      pt-24 md:pt-36 min-h-screen overflow-hidden
+      pt-24 md:pt-36 overflow-hidden
   }
   .home-container {
     @apply 
