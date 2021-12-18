@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Roboto', sans-serif;
+    @apply selection:bg-primary-purple selection:text-white
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply 
+      fixed top-0 inset-x-0 z-20 transition duration-300
+  }
+  .nav-items {
+    @apply 
+      absolute md:static top-0 -right-full 
+      flex flex-col md:flex-row 
+      items-center 
+      justify-start md:justify-end 
+      pt-24 md:pt-0 px-14 w-2/3 gap-12 
+      bg-white md:bg-transparent h-screen md:h-auto
+      transition-all duration-300
+  }
+
+  .nav-items.open {
+    @apply !right-0 
+  }
+
+  .nav-link {
+    @apply 
+      font-medium text-lg 
+      text-primary-purple hover:text-secondary-purple 
+      md:text-white md:hover:text-white/90
+  }
+
+  .form-label {
+    @apply
+      block  ml-2 mb-3
+      text-base md:text-lg tracking-wide 
+      font-medium opacity-60 
+  }
+  .form-input {
+    @apply 
+      rounded-full 
+      px-8 py-3
+      ring-2 ring-black/10
+      focus:ring-4 focus:ring-primary-purple/10
+      text-base md:text-lg outline-none transition
+  }
+
+  .button {
+    @apply 
+      flex items-center gap-3
+      px-6 py-3 rounded-full 
+      bg-yellow-300 text-primary-purple 
+      font-medium transition-all
+      hover:brightness-105
+      hover:shadow-lg 
+      hover:shadow-yellow-300/50
+  }
+
+
+  /* Section */
+  #home {
+    @apply 
+      flex
+      bg-black text-white 
+      pt-24 md:pt-36 min-h-screen overflow-hidden
+  }
+  .home-container {
+    @apply 
+      container 
+      relative z-10 
+      flex flex-col items-center 
+      text-center 
+      px-5 sm:px-20 md:px-28 lg:px-40
+  }
+  .title {
+    @apply 
+      text-2xl sm:text-3xl md:text-4xl lg:text-[55px] 
+      mt-2 md:mt-0
+      font-semibold tracking-wide whitespace-nowrap
+  }
+
+  #about {
+    @apply 
+      container 
+      flex flex-col items-center 
+      text-primary-purple 
+      text-center text-lg sm:text-xl md:text-2xl
+      py-32 md:py-48 px-5 sm:px-16 md:px-28 lg:px-36 space-y-14
+  }
+
+  #services {
+    @apply 
+      relative 
+      flex flex-col 
+      items-center justify-center 
+      scroll-mt-20 
+  }
+  .search-services {
+    @apply 
+      sticky top-20 left-0
+      flex justify-center
+      py-5 w-full bg-white/80 
+      backdrop-blur shadow-sm z-10
+  }
+  .service-item {
+    @apply 
+    flex flex-col md:flex-row gap-4
+    items-start md:items-center justify-between 
+    even:text-primary-purple 
+    odd:bg-gray-100 
+    text-lg md:text-xl py-5 px-5 md:px-10
+  }
+  .service-item a {
+    @apply text-base md:text-xl
+  }
+  .service-show-more-less-button {
+    @apply 
+      flex items-center md:gap-2 
+      text-primary-purple text-sm 
+      font-medium tracking-widest 
+      hover:bg-gray-100 
+      rounded px-2 md:px-4 py-1 md:py-2 
+      transition
+  }
+
+  #article {
+    @apply
+      container 
+      flex flex-col 
+      justify-center items-center 
+      py-32 md:py-48
+  }
+  .article-image {
+    @apply 
+      block rounded-xl 
+      hover:shadow-lg 
+      hover:shadow-black/20
+      overflow-hidden  transition
+  }
+  .article-title {
+    @apply
+      text-xl font-bold
+      opacity-70 mb-2
+      hover:underline 
+      decoration-primary-purple 
+      line-clamp-2
+  }
+  .article-subtitle {
+    @apply opacity-50 font-medium tracking-wide
+  }
+
+  #contact {
+    @apply
+      flex flex-col justify-center items-center
+      py-20 md:py-32 bg-gray-100
+      w-full
+  }
+
+  #footer {
+    @apply 
+      flex flex-col 
+      justify-center items-center 
+      pt-12 pb-8 px-5 
+      space-y-3 text-center
+  }
+}

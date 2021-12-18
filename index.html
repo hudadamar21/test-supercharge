@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Supercharge</title>
+  <link rel="stylesheet" href="./tailwind.css">
+</head>
+
+<body data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
+  
+  <nav class="navbar" data-aos="fade-in" data-aos-delay="1000">
+    <div class="container flex items-center justify-between transition duration-300 h-20">
+      <a href="#home" id="si_icon" class="opacity-0 transition duration-300">
+        <img src="./assets/images/si_icon.png" class="w-14" alt="si icon">
+      </a>
+      <ul class="nav-items">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </ul>
+      <button id="menu" class="block md:hidden z-30">
+        <img src="./assets/icons/menu.svg" class="invert" alt="">
+      </button>
+    </div>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="home-section">
+    <div class="absolute inset-0 opacity-70">
+      <video src="./assets/bg.mp4" class="w-full h-full object-cover" playsinline autoplay loop muted></video>
+    </div>
+    <div class="home-container">
+      <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start w-full mb-14 md:self-start pl-0 xl:pl-24">
+        <img src="./assets/images/emblem.png" class="w-20 md:w-32 lg:w-40" alt="emblem" data-aos="fade-up">
+        <h1 class="title" data-aos="fade-up" data-aos-delay="200">
+          supercharge <span id="typed" class="text-yellow-300"></span>
+        </h1>
+      </div>
+      <h2 class="text-2xl md:text-3xl font-semibold mb-10 tracking-wide" data-aos="fade-up" data-aos-delay="400">
+        We provide online and offline digital solutions for businesses to stay ahead of their competition.
+      </h2>
+      <p class="text-base md:text-xl tracking-wide" data-aos="fade-up" data-aos-delay="600">
+        Please scroll down and read more about our services which might be helpful to you.
+      </p>
+
+      <!-- Scroll Down Button -->
+      <a href="#about" class="my-10 md:my-16 flex flex-col items-center gap-3" data-aos="fade-up" data-aos-delay="800">
+        <div class="animate-bounce opacity-60">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+            role="img" class="iconify iconify--ic" width="32" height="32" preserveAspectRatio="xMidYMid meet"
+            viewBox="0 0 24 24">
+            <path d="M18 6.41L16.59 5L12 9.58L7.41 5L6 6.41l6 6z" fill="white"></path>
+            <path d="M18 13l-1.41-1.41L12 16.17l-4.59-4.58L6 13l6 6z" fill="white"></path>
+          </svg>
+        </div>
+        <p class="animate-pulse opacity-80 tracking-widest uppercase text-xs">
+          Scroll Down
+        </p>
+      </a>
+      
+    </div>
+  </section>
+  <!-- Home - END -->
+
+  <!-- About -->
+  <section id="about" class="about-section">
+    <img src="./assets/images/winwin_icon.png" alt="winwin" data-aos="fade-up">
+    <p data-aos="fade-up">
+      Supercharge Interactive is a digital unit of Davis Materialworks, that provides online and offline web solutions
+      like web consultations, website design, website development, online campaign, and you can view more at
+      <a href="#services" class="font-semibold underline">
+        our services section.
+      </a>
+    </p>
+    <p data-aos="fade-up">
+      We believe that with our <b class="font-semibold">Supercharge Solutions</b>, we can uplift your business position
+      in the competition, and we aim to be the agency of your choice for digital solutions.
+    </p>
+  </section>
+  <!-- About - END -->
+
+  <!-- Services -->
+  <section id="services" class="services-section">
+
+    <!-- Search Input -->
+    <div class="search-services px-5">
+      <div class="relative flex items-center gap-3 w-full md:w-auto">
+        <input type="text" name="search" class="form-input w-full md:w-96 pr-16" placeholder="Search Service" />
+        <div class="absolute top-1/2 -translate-y-1/2 right-5 opacity-30">
+          <img src="./assets/icons/search-icon.svg" class="w-7 md:w-8" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- Service List -->
+    <div class="container mt-16" data-aos="fade-up">
+      <ul>
+        <li class="service-item">
+          <h2>Create: One Page Business Website</h2>
+          <a href="#services" class="button bg-yellow-300">Read More</a>
+        </li>
+        <li class="service-item">
+          <h2>Create / Edit : Paypal Payment Page</h2>
+          <a href="#services" class="button bg-yellow-300">Read More</a>
+        </li>
+        <li class="service-item">
+          <h2>Create / Edit : Stripe Payment Page</h2>
+          <a href="#services" class="button">Read More</a>
+        </li>
+        <li class="service-item">
+          <h2>Generate Traffic : Google Adwords / Advertising</h2>
+          <a href="#services" class="button">Read More</a>
+        </li>
+        <li class="service-item">
+          <h2>Create / Edit : DEM (Direct E-mail Marketing)</h2>
+          <a href="#services" class="button">Read More</a>
+        </li>
+        <li class="service-item">
+          <h2>Create / Edit : PHP Website (non E-commerce)</h2>
+          <a href="#services" class="button">Read More</a>
+        </li>
+        <li class="service-item">
+          <h2>Create / Edit : PHP Website (E-commerce)</h2>
+          <a href="#services" class="button">Read More</a>
+        </li>
+        <li class="service-item">
+          <h2>Create / Edit : Wordpress Website (non E-commerce)</h2>
+          <a href="#services" class="button">Read More</a>
+        </li>
+        <li class="service-item">
+          <h2>Create / Edit : Wordpress E-commerce Website (non Woocommerce)</h2>
+          <a href="#services" class="button">Read More</a>
+        </li>
+      </ul>
+
+      <!-- Show more / Show less -->
+      <div class="flex items-center justify-center md:justify-start gap-3 md:gap-10 mt-5">
+        <button class="service-show-more-less-button">
+          <img src="./assets/icons/arrow-down.svg" class="opacity-60" alt="arrow-down">
+          SHOW MORE
+        </button>
+        <button class="service-show-more-less-button">
+          <img src="./assets/icons/arrow-down.svg" class="opacity-60 rotate-180" alt="arrow-up">
+          SHOW LESS
+        </button>
+      </div>
+
+    </div>
+  </section>
+  <!-- Services - END -->
+
+
+  <!-- Article -->
+  <section id="article">
+    <img src="./assets/images/si_insights.png" class="h-24 md:h-auto" alt="si insights" data-aos="zoom-in">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-5 mt-10 md:mt-16">
+
+      <figure class="space-y-4" data-aos="fade-up">
+        <a href="#article-link" class="article-image">
+          <img src="./assets/images/95.jpg" alt="article">
+        </a>
+        <figcaption>
+          <a href="#article-link" class="article-title">
+            World Largest E-commerce Spying On Website Exposed
+          </a>
+          <p class="article-subtitle">
+            oops..
+          </p>
+        </figcaption>
+      </figure>
+
+      <figure class="space-y-4" data-aos="fade-up" data-aos-delay="50">
+        <a href="#article-link" class="article-image">
+          <img src="./assets/images/94.jpg" alt="article">
+        </a>
+        <figcaption>
+          <a href="#article-link" class="article-title">
+            Scard Social Ranking Reward
+          </a>
+          <p class="article-subtitle">
+            Prize for Nov 2021 to Feb 2022
+          </p>
+        </figcaption>
+      </figure>
+
+      <figure class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+        <a href="#article-link" class="article-image">
+          <img src="./assets/images/93.jpg" alt="article">
+        </a>
+        <figcaption>
+          <a href="#article-link" class="article-title">
+            How to protect our organisation emails if your using office 365
+          </a>
+          <p class="article-subtitle">
+            We will guide you how to setup Threat Managment
+          </p>
+        </figcaption>
+      </figure>
+
+      <figure class="space-y-4" data-aos="fade-up" data-aos-delay="150">
+        <a href="#article-link" class="article-image">
+          <img src="./assets/images/92.jpg" alt="article">
+        </a>
+        <figcaption>
+          <a href="#article-link" class="article-title">
+            We are selling VPN addresses to prevent your display campaign
+          </a>
+          <p class="article-subtitle">
+            from being depleted.
+          </p>
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <a href="#more-article-link" class="button mt-12 px-10" data-aos="zoom-in">
+      <img src="./assets/icons/arrow.svg" class="w-6 md:w-8" alt="">
+      <p class="text-xl md:text-2xl font-bold transition">
+        More Article
+      </p>
+    </a>
+
+  </section>
+  <!-- Article - END -->
+
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2 class="text-4xl md:text-5xl font-bold text-primary-purple mb-12" data-aos="zoom-in">
+      Contact
+    </h2>
+    <form action="#contact" class="w-full lg:w-1/2 px-5 space-y-8">
+
+      <div data-aos="fade-up">
+        <label class="form-label" for="name">
+          Name:
+        </label>
+        <input id="name" class="form-input w-full" type="text" placeholder="type your name..">
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div data-aos="fade-up">
+          <label class="form-label" for="email">
+            Email:
+          </label>
+          <input id="email" class="form-input w-full" type="text" placeholder="example@gmail.com">
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="50">
+          <label class="form-label" for="phone">
+            Phone:
+          </label>
+          <input id="phone" class="form-input w-full" type="text" placeholder="08xxxxxxxxx">
+        </div>
+      </div>
+
+      <p class="text-sm tracking-wide text-center text-green-500" data-aos="fade-up">
+        Your enquiry is important to us, please fill in all the fields and be as clear as possible. Priority will only
+        be given to fields that are completely filled and messages are clear.
+      </p>
+
+      <div data-aos="fade-up">
+        <label for="message" class="form-label">
+          Your Enquiry Messages:
+        </label>
+        <textarea name="message" id="message" rows="8" class="form-input w-full !rounded-2xl !px-5"
+          placeholder="write your message.."></textarea>
+      </div>
+
+      <button type="submit" data-aos="zoom-in"
+        class="button w-full py-4 justify-center text-xl !bg-primary-purple text-white hover:shadow-primary-purple/20">
+        SEND MESSAGE
+      </button>
+
+      <div class=" pt-8 border-t w-full text-center" data-aos="fade-up">
+        <h2 class="uppercase mb-2 text-primary-purple">Your Public IP Address</h2>
+        <div class="text-4xl font-bold">178.128.56.92</div>
+      </div>
+
+    </form>
+  </section>
+  <!-- Contact - END -->
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class=" opacity-50 mb-3">
+      <p class="mb-1">39 Ubi Road 1 #02-04</p>
+      <p>Singapore 408695</p>
+    </div>
+    <p class="text-sm opacity-50 ">
+      © 2015 - 2021 Davis Materialworks & Supercharge Interactive. All Rights Reserved.
+    </p>
+    <a href="#privacy-police" class="text-sm text-primary-purple opacity-80">
+      Privacy Policy
+    </a>
+  </footer>
+  <!-- Footer - END -->
+
+  <script type="module" src="./assets/main.js"></script>
+</body>
+
+</html>
