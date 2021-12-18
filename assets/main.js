@@ -42,7 +42,9 @@ document.addEventListener('scroll', () => {
     navbar.classList.remove('bg-white/80')
     icon.classList.add('opacity-0')
     icon.classList.remove('opacity-100')
-    menu.classList.add('text-white')
+    if (!navItem.classList.contains('open')) {
+      menu.classList.add('text-white')
+    }
     addRemoveLinkClass('remove')
 
   // jika scroll y adalah 0, ubah hapus background 
