@@ -24,10 +24,12 @@ const navLinks = document.querySelectorAll('.nav-items a');
 const menu = document.querySelector('#menu');
 const menuIcon = menu.querySelector('img');
 
+const containerHeight = 620
+
 document.addEventListener('scroll', () => {
 
   // jika scroll y diatas 500, ubah background menjadi putih dan text menjadi primary purple
-  if(window.scrollY > 500) {
+  if(window.scrollY > containerHeight) {
     navbar.classList.add('bg-white/80', 'backdrop-blur')
     navbar.classList.remove('bg-black/50')
     icon.classList.add('opacity-100')
@@ -64,12 +66,12 @@ menu.addEventListener('click', (e) => {
   navItem.classList.toggle('open')
   if(navItem.classList.contains('open')) {
     menuIcon.src = './assets/icons/close.svg'
-    if(window.scrollY >= 0 && window.scrollY <= 500) {
+    if(window.scrollY >= 0 && window.scrollY <= containerHeight) {
       menuIcon.classList.remove('invert')
     }
   } else {
     menuIcon.src = './assets/icons/menu.svg'
-    if(window.scrollY >= 0 && window.scrollY <= 500) {
+    if(window.scrollY >= 0 && window.scrollY <= containerHeight) {
       menuIcon.classList.add('invert')
     }
   }
@@ -80,7 +82,7 @@ document.body.addEventListener('click', (e) => {
   if(navItem.classList.contains('open') && e.target !== navItem) {
     navItem.classList.remove('open')
     menuIcon.src = './assets/icons/menu.svg'
-    if (window.scrollY >= 0 && window.scrollY <= 500) {
+    if (window.scrollY >= 0 && window.scrollY <= containerHeight) {
       menuIcon.classList.add('invert')
     }
   }
