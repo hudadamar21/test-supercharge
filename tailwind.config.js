@@ -15,6 +15,9 @@ module.exports = {
         xl: '5rem'
       }
     },
+    fontFamily: {
+      'open-sans': ['Open Sans', 'sans-serif']
+    },
     extend: {
       colors: {
         primary: {

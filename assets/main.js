@@ -85,7 +85,7 @@ sharethisLabel.addEventListener('click', (e) => {
   e.stopPropagation()
   sharethisContainer.classList.toggle('open')
   if(sharethisContainer.classList.contains('open')) {
-    sharethisLabel.textContent = `Share this to :`
+    sharethisLabel.textContent = 'Share this to : '
   } else {
     sharethisLabel.innerHTML = shareIcon
   }
