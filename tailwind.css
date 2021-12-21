@@ -11,6 +11,22 @@
   }
 }
 
+@layer utilities {
+  .bg-1pbw {
+    background-image: url(/images/bg-01.png);
+    background-size: cover;
+    background-position: center;
+  }
+  .checklist {
+    @apply relative;
+  }
+  .checklist::before {
+    content: '';
+    background-image: url(/icons/check-icon.svg);
+    @apply absolute top-1/2 -translate-y-1/2 bg-contain -left-6 h-4 w-4
+  }
+}
+
 @layer components {
   .navbar {
     @apply 
@@ -53,17 +69,53 @@
       text-base md:text-lg outline-none transition
   }
 
-  .button {
+  .btn {
     @apply 
       flex items-center gap-3
       px-6 py-3 rounded-full 
-      bg-yellow-300 text-primary-purple 
       font-medium transition-all
       hover:brightness-105
-      hover:shadow-lg 
+      hover:shadow-lg
+  }
+
+  .btn-yellow {
+    @apply 
+      bg-yellow-300 text-primary-purple 
       hover:shadow-yellow-300/50
   }
 
+  .btn-purple {
+    @apply 
+      bg-primary-purple text-white
+      hover:shadow-primary-purple/20
+  }
+
+  .btn-play {
+    @apply 
+      absolute-center
+      bg-red-600 hover:bg-red-500 
+      rounded-full p-5 
+      hover:scale-110 transition
+  }
+
+  .absolute-center {
+    @apply 
+      absolute 
+      top-1/2 left-1/2 
+      -translate-y-1/2 -translate-x-1/2 
+  }
+
+  .visit-demo {
+    @apply 
+      absolute bottom-0 inset-x-0 
+      bg-primary-purple 
+      text-white font-bold 
+      py-3 text-xl uppercase 
+      translate-y-20 group-hover:translate-y-0 
+      transition duration-500
+  }
+
+  
 
   /* Section */
   #home {
@@ -76,7 +128,7 @@
     @apply 
       container 
       relative z-10 
-      flex flex-col items-center 
+      flex flex-col items-center justify-center
       text-center 
       px-5 sm:px-20 md:px-28 lg:px-40
   }
@@ -168,7 +220,29 @@
     @apply 
       flex flex-col 
       justify-center items-center 
-      pt-12 pb-8 px-5 
+      py-16 px-5 
       space-y-3 text-center
+  }
+
+  .single-slide-image {
+    @apply relative block h-56 w-full rounded-lg overflow-hidden shadow-lg bg-primary-purple
+  }
+
+  .single-slide-image img {
+    @apply
+      h-full w-full
+      transition duration-500
+      object-cover
+  }
+
+  .single-slide-image img:not(:first-child) {
+    @apply absolute-center
+  }
+
+  .sharethis-container {
+    @apply fixed top-24 right-0 translate-x-[80%] z-30 bg-gray-50 border px-4 py-3 rounded rounded-l-full shadow flex items-center gap-4 transition duration-500
+  }
+  .sharethis-container.open {
+    @apply !translate-x-0
   }
 }

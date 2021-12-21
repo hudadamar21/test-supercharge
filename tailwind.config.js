@@ -1,6 +1,7 @@
 module.exports = {
   content: [
     "./index.html",
+    "./*/**.html",
     "./assets/main.js"
   ],
   theme: {
