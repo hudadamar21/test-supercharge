@@ -13,7 +13,7 @@
 
 @layer utilities {
   .bg-1pbw {
-    background-image: url(/images/bg-01.png);
+    background-image: url(/assets/images/bg-01.png);
     background-size: cover;
     background-position: center;
   }
@@ -22,7 +22,7 @@
   }
   .checklist::before {
     content: '';
-    background-image: url(/icons/check-icon.svg);
+    background-image: url(/assets/icons/check-icon.svg);
     @apply absolute top-1/2 -translate-y-1/2 bg-contain -left-6 h-4 w-4
   }
 }
@@ -30,7 +30,7 @@
 @layer components {
   .navbar {
     @apply 
-      fixed top-0 inset-x-0 z-20 transition duration-300
+      fixed top-0 inset-x-0 z-40 transition duration-300
   }
   .nav-items {
     @apply 
@@ -240,9 +240,9 @@
   }
 
   .sharethis-container {
-    @apply fixed top-24 right-0 translate-x-[80%] z-30 bg-gray-50 border px-4 py-3 rounded rounded-l-full shadow flex items-center gap-4 transition duration-500
+    @apply fixed top-24 right-0 translate-x-[82%] z-30 bg-gray-50 border px-4 py-3 rounded rounded-l-full shadow flex items-center gap-4 transition duration-500
   }
   .sharethis-container.open {
-    @apply !translate-x-0
+    @apply translate-x-0
   }
 }

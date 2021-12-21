@@ -2,17 +2,10 @@
   "name": "supercharge",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.5",
-    "tailwindcss": "^3.0.6",
-    "vite": "^2.7.2"
+    "dev": "npx tailwindcss -i ./tailwind.css -o ./assets/css/tailwind.css --watch"
   },
   "dependencies": {
+    "tailwindcss": "^3.0.6",
     "@tailwindcss/line-clamp": "^0.3.0",
     "typed.js": "^2.0.12"
   }

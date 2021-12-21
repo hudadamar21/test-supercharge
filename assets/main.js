@@ -93,21 +93,21 @@ sharethisLabel.addEventListener('click', (e) => {
 
 
 // Handle Clide Outside
-document.body.addEventListener('click', (e) => {
-
-  // Click Outside Menu to Sharethis 
-  if(sharethisContainer.classList.contains('open') && e.target !== sharethisContainer) {
-    sharethisContainer.classList.remove('open')
-    sharethisLabel.innerHTML = shareIcon
-  }
+document.addEventListener('click', (e) => {
 
   // Click Outside Menu to Close Menu
-  if(navItem.classList.contains('open') && e.target !== navItem) {
+  if (navItem.classList.contains('open') && e.target !== navItem) {
     navItem.classList.remove('open')
     menu.innerHTML = menuIcon
     if (window.scrollY >= 0 && window.scrollY <= containerHeight) {
       menu.classList.add('text-white')
     }
+  }
+
+  // Click Outside Menu to Sharethis 
+  if(sharethisContainer.classList.contains('open') && e.target !== sharethisContainer) {
+    sharethisContainer.classList.remove('open')
+    sharethisLabel.innerHTML = shareIcon
   }
 
 })

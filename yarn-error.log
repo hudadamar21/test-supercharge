@@ -1,0 +1,44 @@
+Arguments: 
+  C:\Program Files\node\node.exe C:\Users\USER\.yarn\releases\yarn-1.22.11.cjs dev
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Files\cpp\bin\Intel64;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Common Files\Autodesk Shared\;C:\Program Files (x86)\backburner 2\;C:\Program Files (x86)\Common Files\lenovo\easyplussdk\bin;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\BC5\BIN;C:\adb;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\xampp\php;C:\Program Files\Git\cmd;C:\Program Files\gradle-4.6\bin;C:\Program Files\kotlinc\bin;C:\Program Files\MongoDB\Server\4.2\bin;C:\src\flutter\bin;c:\page;C:\Program Files\Redis\;C:\Program Files\node\;C:\ProgramData\ComposerSetup\bin;C:\Users\USER\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\USER\AppData\Local\Programs\Python\Python39\;C:\BC5\BIN;C:\Users\USER\AppData\Roaming\Composer\vendor\bin;C:\Program Files\Java\jdk1.8.0_231\bin;C:\Program Files\gradle-3.5\bin;C:\Users\USER\AppData\Local\GitHubDesktop\bin;C:\src\hugo;C:\laragon\bin\php\php-7.4.19-Win32-vc15-x64;C:\Users\USER\AppData\Roaming\npm;C:\Users\USER\AppData\Local\Programs\Microsoft VS Code\bin
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  16.8.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: D:\HartD\Programing\WORK\Supercharge\package.json: Unexpected token } in JSON at position 151
+      at JSON.parse (<anonymous>)
+      at C:\Users\USER\.yarn\releases\yarn-1.22.11.cjs:1098:57
+      at Generator.next (<anonymous>)
+      at step (C:\Users\USER\.yarn\releases\yarn-1.22.11.cjs:310:30)
+      at C:\Users\USER\.yarn\releases\yarn-1.22.11.cjs:321:13
+
+npm manifest: 
+  {
+    "name": "supercharge",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "npx tailwindcss -i ./tailwind.css -o ./assets/css/tailwind.css --watch",
+    },
+    "devDependencies": {
+      "tailwindcss": "^3.0.6"
+    },
+    "dependencies": {
+      "@tailwindcss/line-clamp": "^0.3.0",
+      "typed.js": "^2.0.12"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
