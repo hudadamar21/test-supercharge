@@ -74,23 +74,16 @@ menu.addEventListener('click', (e) => {
 })
 
 // Share this label 
-const sharethisContainer = document.querySelector('.sharethis-container');
-const sharethisLabel = document.querySelector('.sharethis-label');
+const sharethisButton = document.querySelector('.sharethis-button');
+const sharethis = document.querySelector('.sharethis');
 
-const shareIcon = `
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--icomoon-free w-8 h-8 fill-primary-purple"  preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path d="M13.5 11c-.706 0-1.342.293-1.797.763L4.969 8.396a2.46 2.46 0 0 0 0-.792l6.734-3.367a2.5 2.5 0 1 0-.672-1.341L4.297 6.263a2.5 2.5 0 1 0 0 3.474l6.734 3.367A2.5 2.5 0 1 0 13.5 11z"></path></svg>
-`
-
-sharethisLabel.addEventListener('click', (e) => {
+sharethisButton.addEventListener('click', (e) => {
   e.stopPropagation()
-  sharethisContainer.classList.toggle('open')
-  if(sharethisContainer.classList.contains('open')) {
-    sharethisLabel.textContent = 'Share this to : '
-  } else {
-    sharethisLabel.innerHTML = shareIcon
-  }
+  sharethis.classList.toggle('-top-full')
+  sharethis.classList.toggle('top-0')
 })
 
+sharethis.addEventListener('click', e => e.stopPropagation())
 
 // Handle Clide Outside
 document.addEventListener('click', (e) => {
@@ -105,9 +98,9 @@ document.addEventListener('click', (e) => {
   }
 
   // Click Outside Menu to Sharethis 
-  if(sharethisContainer.classList.contains('open') && e.target !== sharethisContainer) {
-    sharethisContainer.classList.remove('open')
-    sharethisLabel.innerHTML = shareIcon
+  if(!sharethis.classList.contains('-top-full') && e.target !== sharethis) {
+    sharethis.classList.add('-top-full')
+    sharethis.classList.remove('top-0')
   }
 
 })

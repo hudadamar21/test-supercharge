@@ -240,10 +240,8 @@
     @apply absolute-center
   }
 
-  .sharethis-container {
-    @apply fixed top-24 right-0 translate-x-[82%] z-30 bg-gray-50 border px-4 py-3 rounded rounded-l-full shadow flex items-center gap-4 transition duration-500
+  .sharethis-button {
+    @apply fixed top-24 right-0 z-30 bg-gray-50 border px-4 py-3 rounded rounded-l-full shadow flex items-center gap-4 transition duration-500
   }
-  .sharethis-container.open {
-    @apply translate-x-0
-  }
+
 }
