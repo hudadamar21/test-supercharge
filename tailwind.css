@@ -244,4 +244,9 @@
     @apply fixed top-24 right-0 z-30 bg-gray-50 border px-4 py-3 rounded rounded-l-full shadow flex items-center gap-4 transition duration-500
   }
 
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-primary-purple
+  }
+
+  
 }
